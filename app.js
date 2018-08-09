@@ -7,7 +7,8 @@ const data = csvToJson.fieldDelimiter(',').getJsonFromCsv('students.csv');
 
 function findById(data, id){
     for (let i = 0; i < data.length; i++){
-        if (data[i].id === id){
+        let studentString = data[i].id.toString();
+        if (studentString === id){
             return data[i];
         }
     }return null;
